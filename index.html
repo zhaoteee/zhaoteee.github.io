@@ -257,6 +257,141 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://zhaoteee.github.io/2017/02/26/vue引入svg生成的字体/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="zhaote">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/head.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="zhaote">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="zhaote" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/02/26/vue引入svg生成的字体/" itemprop="url">
+                  Untitled
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-26T16:43:07+08:00">
+                2017-02-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="vue引入svg生成的字体图标出现的—-文件路径问题"><a href="#vue引入svg生成的字体图标出现的—-文件路径问题" class="headerlink" title="vue引入svg生成的字体图标出现的—-文件路径问题"></a>vue引入svg生成的字体图标出现的—-文件路径问题</h2><blockquote>
+<p>　This dependency(ies) was(were) not found in node_modules ？？？<br>** </p>
+<h3 id="项目路径为："><a href="#项目路径为：" class="headerlink" title="项目路径为："></a>项目路径为：</h3><p><img src="img/pro1.png" alt=""></p>
+<ol>
+<li>在<code>main.js</code>中引入<code>import &#39;common/stylus/index.styl&#39;</code><br>——- git bash报错`This dependency was not found in node_modules:<pre><code>common/stylus/index.styl`，理解为：在`node_modules`文件夹中找不到该文件？？？，&lt;br&gt;为啥到node_model中找，不是指明路径了？ 然后开始百度谷歌This dependency was not found in node_modules的原因。无果。
+</code></pre>——– 还是浏览器帮了忙，因为chrome：<code>in ./src/main.js
+ Module not found: Error: Can&#39;t resolve &#39;common/stylus/index.styl&#39; in &#39;F:\NodeJS\vuep\src&#39;</code><br> 好吧，原来是在src目录找不到，将其改为<code>import &#39;./common/stylus/index.styl&#39;</code>解决，当前目录<br></li>
+<li>同时还有另一个相同的问题，是在引入svg生成的font图标时，<br><img src="img/font.png" alt="">   <h5 id="git-bash-these-dependencies-were-not-found-in-node-modules，"><a href="#git-bash-these-dependencies-were-not-found-in-node-modules，" class="headerlink" title="git bash: these dependencies were not found in node_modules，"></a>git bash: these dependencies were not found in node_modules，<br></h5><pre><code>Did you forget to run npm install --save for them? 
+</code></pre>   好有迷惑性，就开始分析node_modules……<h5 id="chrome"><a href="#chrome" class="headerlink" title="chrome: "></a>chrome: <br></h5>Module not found: Error: Can’t resolve ‘./fonts/sell-icon.eot?244okq’ in <br>‘F:\NodeJS\vuep\src\common\stylus’<br>原来他是在<code>rc\common\stylus</code>中找不到文件<br><br>解决方法： 将font的目录改为上一级目录 <code>&#39;../fonts/...&#39;</code></li>
+</ol>
+</blockquote>
+<h2 id="还掉进路由配置的一个坑里"><a href="#还掉进路由配置的一个坑里" class="headerlink" title="还掉进路由配置的一个坑里"></a>还掉进路由配置的一个坑里<br></h2><p>** 在创建项目时候，vue-router 选择了yes,自动生成了router文件夹<br><br>   就以为路由都是在这里面配置的，将路由配置全写里面，然后掉进去了。<br>   前前后后重新vue init将近十多个project，都是到同一步出错。<br>   只能到GitHub上找vue-router相关项目查看前辈怎么配置的路由。<br>1.在main.js中配置路由<br>2.在结尾<code>const app = new Vue({
+    router: router,
+    render: h =&gt; h(App)
+}).$mount(&#39;#app&#39;)</code><br><br>后添加export default app 解决了问题app is assigned but not used的问题<br>ps: 看到好多项目多不需要，原因待了解。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
   <link itemprop="mainEntityOfPage" href="http://zhaoteee.github.io/2017/02/26/hello-world/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -422,7 +557,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

@@ -101,9 +101,9 @@ common/stylus/ind">
 
 在main.js中引入import &amp;#39;common/stylus/index.styl&amp;#39;git bash报错This dependency was not found in node_modules:
 common/stylus/ind">
-<meta property="og:image" content="http://zhaoteee.github.io/2017/02/26/vue引入svg生成的字体/">
-<meta property="og:image" content="http://zhaoteee.github.io/2017/02/26/vue引入svg生成的字体/">
-<meta property="og:updated_time" content="2017-03-03T05:06:15.917Z">
+<meta property="og:image" content="http://zhaoteee.github.io/2017/02/26/vue引入svg生成的字体/pro1.png">
+<meta property="og:image" content="http://zhaoteee.github.io/2017/02/26/vue引入svg生成的字体/font.png">
+<meta property="og:updated_time" content="2017-03-03T05:12:25.345Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue引入svg生成的字体图标带来的----文件路径问题">
 <meta name="twitter:description" content="This dependency(ies) was(were) not found in node_modules ？？？** 
@@ -111,7 +111,7 @@ common/stylus/ind">
 
 在main.js中引入import &amp;#39;common/stylus/index.styl&amp;#39;git bash报错This dependency was not found in node_modules:
 common/stylus/ind">
-<meta name="twitter:image" content="http://zhaoteee.github.io/2017/02/26/vue引入svg生成的字体/">
+<meta name="twitter:image" content="http://zhaoteee.github.io/2017/02/26/vue引入svg生成的字体/pro1.png">
 
 
 
@@ -351,13 +351,13 @@ common/stylus/ind">
       
         <blockquote>
 <p>　This dependency(ies) was(were) not found in node_modules ？？？<br>** </p>
-<h3 id="项目路径为："><a href="#项目路径为：" class="headerlink" title="项目路径为："></a>项目路径为：</h3><p><img src="/2017/02/26/vue引入svg生成的字体/" alt="pro1"></p>
+<h3 id="项目路径为："><a href="#项目路径为：" class="headerlink" title="项目路径为："></a>项目路径为：</h3><p><img src="/2017/02/26/vue引入svg生成的字体/pro1.png" alt=""></p>
 <ol>
 <li>在<code>main.js</code>中引入<code>import &#39;common/stylus/index.styl&#39;</code><br>git bash报错<code>This dependency was not found in node_modules:
 common/stylus/index.styl</code>，理解为：在<code>node_modules</code>文件夹中找不到该文件？？？，<br>为啥到node_model中找，不是指明路径了？ 然后开始百度谷歌This dependency was not found in node_modules的原因。无果。<br>还是浏览器帮了忙，因为chrome：<code>in ./src/main.js
  Module not found: Error: Can&#39;t resolve &#39;common/stylus/index.styl&#39; in &#39;F:\NodeJS\vuep\src&#39;</code><br> 好吧，原来是在src目录找不到，将其改为<code>import &#39;./common/stylus/index.styl&#39;</code>解决，当前目录<br></li>
 <li>同时还有另一个相同的问题，是在引入svg生成的font图标时，<a id="more"></a>
-<img src="/2017/02/26/vue引入svg生成的字体/" alt="font">   <h5 id="git-bash-these-dependencies-were-not-found-in-node-modules，"><a href="#git-bash-these-dependencies-were-not-found-in-node-modules，" class="headerlink" title="git bash: these dependencies were not found in node_modules，"></a>git bash: these dependencies were not found in node_modules，<br></h5><pre><code>Did you forget to run npm install --save for them? 
+<img src="/2017/02/26/vue引入svg生成的字体/font.png" alt="">   <h5 id="git-bash-these-dependencies-were-not-found-in-node-modules，"><a href="#git-bash-these-dependencies-were-not-found-in-node-modules，" class="headerlink" title="git bash: these dependencies were not found in node_modules，"></a>git bash: these dependencies were not found in node_modules，<br></h5><pre><code>Did you forget to run npm install --save for them? 
 </code></pre>   好有迷惑性，就开始分析node_modules……<h5 id="chrome"><a href="#chrome" class="headerlink" title="chrome: "></a>chrome: <br></h5>Module not found: Error: Can’t resolve ‘./fonts/sell-icon.eot?244okq’ in <br>‘F:\NodeJS\vuep\src\common\stylus’<br>原来他是在<code>rc\common\stylus</code>中找不到文件<br><br>解决方法： 将font的目录改为上一级目录 <code>&#39;../fonts/...&#39;</code></li>
 </ol>
 </blockquote>

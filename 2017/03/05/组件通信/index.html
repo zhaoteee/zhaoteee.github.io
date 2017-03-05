@@ -91,13 +91,11 @@
 具体过程记录如下：
 
 
-在个组件的上层目录创建 bus.vue 空实例 `
-import Vue from &amp;apos;vue&amp;apos;;
+在个组件的上层目录创建 bus.vue 空实例 `import Vue from &amp;apos;vue&amp;apos;;
 var bus = new Vue();
 export default bus;
  `
-
-如果子组件(child)的点击事件有参数">
+如果子组件(child)的点击事件有参数想传">
 <meta property="og:type" content="article">
 <meta property="og:title" content="v2.0-父子组件及兄弟组件间的事件传递">
 <meta property="og:url" content="http://zhaoteee.github.io/2017/03/05/组件通信/index.html">
@@ -106,27 +104,23 @@ export default bus;
 具体过程记录如下：
 
 
-在个组件的上层目录创建 bus.vue 空实例 `
-import Vue from &amp;apos;vue&amp;apos;;
+在个组件的上层目录创建 bus.vue 空实例 `import Vue from &amp;apos;vue&amp;apos;;
 var bus = new Vue();
 export default bus;
  `
-
-如果子组件(child)的点击事件有参数">
-<meta property="og:updated_time" content="2017-03-05T06:33:13.412Z">
+如果子组件(child)的点击事件有参数想传">
+<meta property="og:updated_time" content="2017-03-05T06:34:31.112Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="v2.0-父子组件及兄弟组件间的事件传递">
 <meta name="twitter:description" content="项目通信简单，不使用vuex时，而且v2.0废弃了events等函数， 官方文档指出可以使用一个单独的事件中心进行组件间通信
 具体过程记录如下：
 
 
-在个组件的上层目录创建 bus.vue 空实例 `
-import Vue from &amp;apos;vue&amp;apos;;
+在个组件的上层目录创建 bus.vue 空实例 `import Vue from &amp;apos;vue&amp;apos;;
 var bus = new Vue();
 export default bus;
  `
-
-如果子组件(child)的点击事件有参数">
+如果子组件(child)的点击事件有参数想传">
 
 
 
@@ -226,7 +220,7 @@ export default bus;
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -236,7 +230,7 @@ export default bus;
             
               <i class="menu-item-icon fa fa-fw fa-archives"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -256,7 +250,7 @@ export default bus;
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
-            About
+            Über
           </a>
         </li>
       
@@ -326,7 +320,7 @@ export default bus;
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-05T14:26:40+08:00">
                 2017-03-05
@@ -369,19 +363,13 @@ export default bus;
 <li>具体过程记录如下：</li>
 </ul>
 <ol>
-<li><p>在个组件的上层目录创建 bus.vue 空实例<br> `<script></p>
-<pre><code>import Vue from &apos;vue&apos;;
+<li>在个组件的上层目录创建 bus.vue 空实例<br> `<script><pre><code>import Vue from &apos;vue&apos;;
 var bus = new Vue();
 export default bus;
-</code></pre><p> </script>`</p>
-</li>
-<li><p>如果子组件(child)的点击事件有参数想传递到兄弟组件<br> </p>
-<a id="more"></a>
-<p> 01-兄弟组件和该子组件(child)从上层目录中:<br> <code>import bus from &#39;../bus&#39;;</code><br> 02-在子组件(child)中,addCount为触发事件的函数名<br> `methods: {<br>   addCount() {</p>
-<pre><code>eventHub.$emit(&apos;cartadd&apos;, { 参数 })
-</code></pre><p>   }<br>}<code>&lt;br&gt;
-03-兄弟组件</code>$on<code>监听,在</code>methods<code>中接收事件参数</code>created() {<br> bus.$on(‘cartadd’, this.addCount);<br> }<code>&lt;br&gt;</code>methods: {<br> addCount(target) {<br>  this.drop(target);<br> },<br> drop(el) {<br>   console.log(el);<br> }<br>}`<br>3.更复杂的一个方式:<br>子组件先将事件传递到两兄弟共同的父组件，<br><br>在父组件中监听并接收参数<br></p>
-</li>
+</code></pre> </script>`</li>
+<li>如果子组件(child)的点击事件有参数想传递到兄弟组件<br><br> 01-兄弟组件和该子组件(child)从上层目录中:<br> <code>import bus from &#39;../bus&#39;;</code><br> 02-在子组件(child)中,addCount为触发事件的函数名<br> `methods: {<br>   addCount() {<pre><code>eventHub.$emit(&apos;cartadd&apos;, { 参数 })
+</code></pre>   }<br>}<code>&lt;br&gt;
+03-兄弟组件</code>$on<code>监听,在</code>methods<code>中接收事件参数</code>created() {<br> bus.$on(‘cartadd’, this.addCount);<br> }<code>&lt;br&gt;</code>methods: {<br> addCount(target) {<br>  this.drop(target);<br> },<br> drop(el) {<br>   console.log(el);<br> }<br>}`<br>3.更复杂的一个方式:<br>子组件先将事件传递到两兄弟共同的父组件，<br><br>在父组件中监听并接收参数<br></li>
 </ol>
 <p><code>addCount(target) {
   this.$refs.兄弟组件.drop(target);
@@ -494,7 +482,7 @@ export default bus;
             <div class="site-state-item site-state-posts">
               <a href="/archives">
                 <span class="site-state-item-count">3</span>
-                <span class="site-state-item-name">posts</span>
+                <span class="site-state-item-name">Artikel</span>
               </a>
             </div>
           
@@ -568,7 +556,7 @@ export default bus;
 
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">

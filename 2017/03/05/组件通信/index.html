@@ -93,8 +93,7 @@
 
 在个组件的上层目录创建 bus.vue 空实例 import Vue from &amp;#39;vue&amp;#39;;
  var bus = new Vue();
- export default bus;
-如果子组件(child)的点击事件有参数想传递到兄弟">
+ export default bus;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="v2.0-父子组件及兄弟组件间的事件传递">
 <meta property="og:url" content="http://zhaoteee.github.io/2017/03/05/组件通信/index.html">
@@ -105,9 +104,8 @@
 
 在个组件的上层目录创建 bus.vue 空实例 import Vue from &amp;#39;vue&amp;#39;;
  var bus = new Vue();
- export default bus;
-如果子组件(child)的点击事件有参数想传递到兄弟">
-<meta property="og:updated_time" content="2017-03-05T06:36:22.834Z">
+ export default bus;">
+<meta property="og:updated_time" content="2017-03-05T06:37:46.916Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="v2.0-父子组件及兄弟组件间的事件传递">
 <meta name="twitter:description" content="项目通信简单，不使用vuex时，而且v2.0废弃了events等函数， 官方文档指出可以使用一个单独的事件中心进行组件间通信
@@ -116,8 +114,7 @@
 
 在个组件的上层目录创建 bus.vue 空实例 import Vue from &amp;#39;vue&amp;#39;;
  var bus = new Vue();
- export default bus;
-如果子组件(child)的点击事件有参数想传递到兄弟">
+ export default bus;">
 
 
 
@@ -217,7 +214,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -227,7 +224,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archives"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -247,7 +244,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
-            Über
+            About
           </a>
         </li>
       
@@ -317,7 +314,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-05T14:26:40+08:00">
                 2017-03-05
@@ -362,7 +359,7 @@
 <ol>
 <li>在个组件的上层目录创建 bus.vue 空实例<br> <code>import Vue from &#39;vue&#39;;
  var bus = new Vue();
- export default bus;</code></li>
+ export default bus;</code><a id="more"></a></li>
 <li>如果子组件(child)的点击事件有参数想传递到兄弟组件<br><br> 01-兄弟组件和该子组件(child)从上层目录中:<br> <code>import bus from &#39;../bus&#39;;</code><br> 02-在子组件(child)中,addCount为触发事件的函数名<br> `methods: {<br>   addCount() {<pre><code>eventHub.$emit(&apos;cartadd&apos;, { 参数 })
 </code></pre>   }<br>}<code>&lt;br&gt;
 03-兄弟组件</code>$on<code>监听,在</code>methods<code>中接收事件参数</code>created() {<br> bus.$on(‘cartadd’, this.addCount);<br> }<code>&lt;br&gt;</code>methods: {<br> addCount(target) {<br>  this.drop(target);<br> },<br> drop(el) {<br>   console.log(el);<br> }<br>}`</li>
@@ -479,7 +476,7 @@
             <div class="site-state-item site-state-posts">
               <a href="/archives">
                 <span class="site-state-item-count">3</span>
-                <span class="site-state-item-name">Artikel</span>
+                <span class="site-state-item-name">posts</span>
               </a>
             </div>
           
@@ -553,7 +550,7 @@
 
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">

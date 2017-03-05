@@ -91,11 +91,10 @@
 具体过程记录如下：
 
 
-在个组件的上层目录创建 bus.vue 空实例 `import Vue from &amp;apos;vue&amp;apos;;
-var bus = new Vue();
-export default bus;
- `
-如果子组件(child)的点击事件有参数想传">
+在个组件的上层目录创建 bus.vue 空实例 import Vue from &amp;#39;vue&amp;#39;;
+ var bus = new Vue();
+ export default bus;
+如果子组件(child)的点击事件有参数想传递到兄弟">
 <meta property="og:type" content="article">
 <meta property="og:title" content="v2.0-父子组件及兄弟组件间的事件传递">
 <meta property="og:url" content="http://zhaoteee.github.io/2017/03/05/组件通信/index.html">
@@ -104,23 +103,21 @@ export default bus;
 具体过程记录如下：
 
 
-在个组件的上层目录创建 bus.vue 空实例 `import Vue from &amp;apos;vue&amp;apos;;
-var bus = new Vue();
-export default bus;
- `
-如果子组件(child)的点击事件有参数想传">
-<meta property="og:updated_time" content="2017-03-05T06:34:31.112Z">
+在个组件的上层目录创建 bus.vue 空实例 import Vue from &amp;#39;vue&amp;#39;;
+ var bus = new Vue();
+ export default bus;
+如果子组件(child)的点击事件有参数想传递到兄弟">
+<meta property="og:updated_time" content="2017-03-05T06:36:22.834Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="v2.0-父子组件及兄弟组件间的事件传递">
 <meta name="twitter:description" content="项目通信简单，不使用vuex时，而且v2.0废弃了events等函数， 官方文档指出可以使用一个单独的事件中心进行组件间通信
 具体过程记录如下：
 
 
-在个组件的上层目录创建 bus.vue 空实例 `import Vue from &amp;apos;vue&amp;apos;;
-var bus = new Vue();
-export default bus;
- `
-如果子组件(child)的点击事件有参数想传">
+在个组件的上层目录创建 bus.vue 空实例 import Vue from &amp;#39;vue&amp;#39;;
+ var bus = new Vue();
+ export default bus;
+如果子组件(child)的点击事件有参数想传递到兄弟">
 
 
 
@@ -363,13 +360,13 @@ export default bus;
 <li>具体过程记录如下：</li>
 </ul>
 <ol>
-<li>在个组件的上层目录创建 bus.vue 空实例<br> `<script><pre><code>import Vue from &apos;vue&apos;;
-var bus = new Vue();
-export default bus;
-</code></pre> </script>`</li>
+<li>在个组件的上层目录创建 bus.vue 空实例<br> <code>import Vue from &#39;vue&#39;;
+ var bus = new Vue();
+ export default bus;</code></li>
 <li>如果子组件(child)的点击事件有参数想传递到兄弟组件<br><br> 01-兄弟组件和该子组件(child)从上层目录中:<br> <code>import bus from &#39;../bus&#39;;</code><br> 02-在子组件(child)中,addCount为触发事件的函数名<br> `methods: {<br>   addCount() {<pre><code>eventHub.$emit(&apos;cartadd&apos;, { 参数 })
 </code></pre>   }<br>}<code>&lt;br&gt;
-03-兄弟组件</code>$on<code>监听,在</code>methods<code>中接收事件参数</code>created() {<br> bus.$on(‘cartadd’, this.addCount);<br> }<code>&lt;br&gt;</code>methods: {<br> addCount(target) {<br>  this.drop(target);<br> },<br> drop(el) {<br>   console.log(el);<br> }<br>}`<br>3.更复杂的一个方式:<br>子组件先将事件传递到两兄弟共同的父组件，<br><br>在父组件中监听并接收参数<br></li>
+03-兄弟组件</code>$on<code>监听,在</code>methods<code>中接收事件参数</code>created() {<br> bus.$on(‘cartadd’, this.addCount);<br> }<code>&lt;br&gt;</code>methods: {<br> addCount(target) {<br>  this.drop(target);<br> },<br> drop(el) {<br>   console.log(el);<br> }<br>}`</li>
+<li>更复杂的一个方式:<br>子组件先将事件传递到两兄弟共同的父组件，<br><br>在父组件中监听并接收参数<br></li>
 </ol>
 <p><code>addCount(target) {
   this.$refs.兄弟组件.drop(target);

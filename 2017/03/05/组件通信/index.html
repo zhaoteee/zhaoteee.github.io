@@ -87,9 +87,7 @@
 
 
 
-<meta name="description" content="v2.0-父子组件及兄弟组件间的事件传递
-
-项目通信简单，不使用vuex时，而且v2.0废弃了events等函数， 官方文档指出可以使用一个单独的事件中心进行组件间通信
+<meta name="description" content="项目通信简单，不使用vuex时，而且v2.0废弃了events等函数， 官方文档指出可以使用一个单独的事件中心进行组件间通信
 具体过程记录如下：
 
 
@@ -98,12 +96,10 @@ var bus = new Vue();
 export default bus;
  `">
 <meta property="og:type" content="article">
-<meta property="og:title" content="zhaote">
+<meta property="og:title" content="v2.0-父子组件及兄弟组件间的事件传递">
 <meta property="og:url" content="http://zhaoteee.github.io/2017/03/05/组件通信/index.html">
 <meta property="og:site_name" content="zhaote">
-<meta property="og:description" content="v2.0-父子组件及兄弟组件间的事件传递
-
-项目通信简单，不使用vuex时，而且v2.0废弃了events等函数， 官方文档指出可以使用一个单独的事件中心进行组件间通信
+<meta property="og:description" content="项目通信简单，不使用vuex时，而且v2.0废弃了events等函数， 官方文档指出可以使用一个单独的事件中心进行组件间通信
 具体过程记录如下：
 
 
@@ -111,12 +107,10 @@ export default bus;
 var bus = new Vue();
 export default bus;
  `">
-<meta property="og:updated_time" content="2017-03-05T06:26:17.176Z">
+<meta property="og:updated_time" content="2017-03-05T06:31:20.689Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="zhaote">
-<meta name="twitter:description" content="v2.0-父子组件及兄弟组件间的事件传递
-
-项目通信简单，不使用vuex时，而且v2.0废弃了events等函数， 官方文档指出可以使用一个单独的事件中心进行组件间通信
+<meta name="twitter:title" content="v2.0-父子组件及兄弟组件间的事件传递">
+<meta name="twitter:description" content="项目通信简单，不使用vuex时，而且v2.0废弃了events等函数， 官方文档指出可以使用一个单独的事件中心进行组件间通信
 具体过程记录如下：
 
 
@@ -157,7 +151,7 @@ export default bus;
 
 
 
-  <title>  | zhaote </title>
+  <title> v2.0-父子组件及兄弟组件间的事件传递 | zhaote </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -223,7 +217,7 @@ export default bus;
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -233,7 +227,7 @@ export default bus;
             
               <i class="menu-item-icon fa fa-fw fa-archives"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -253,7 +247,7 @@ export default bus;
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
-            About
+            Über
           </a>
         </li>
       
@@ -310,7 +304,7 @@ export default bus;
             
             
               
-                
+                v2.0-父子组件及兄弟组件间的事件传递
               
             
           </h1>
@@ -323,7 +317,7 @@ export default bus;
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-05T14:26:40+08:00">
                 2017-03-05
@@ -361,8 +355,7 @@ export default bus;
       
 
       
-        <h2 id="v2-0-父子组件及兄弟组件间的事件传递"><a href="#v2-0-父子组件及兄弟组件间的事件传递" class="headerlink" title="v2.0-父子组件及兄弟组件间的事件传递"></a>v2.0-父子组件及兄弟组件间的事件传递</h2><hr>
-<ul>
+        <ul>
 <li>项目通信简单，不使用vuex时，而且v2.0废弃了events等函数，<br><br> 官方文档指出可以使用一个单独的事件中心进行组件间通信</li>
 <li>具体过程记录如下：</li>
 </ul>
@@ -469,17 +462,8 @@ export default bus;
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/head.jpg"
@@ -495,7 +479,7 @@ export default bus;
             <div class="site-state-item site-state-posts">
               <a href="/archives">
                 <span class="site-state-item-count">3</span>
-                <span class="site-state-item-name">posts</span>
+                <span class="site-state-item-name">Artikel</span>
               </a>
             </div>
           
@@ -544,22 +528,6 @@ export default bus;
       </section>
 
       
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#v2-0-父子组件及兄弟组件间的事件传递"><span class="nav-number">1.</span> <span class="nav-text">v2.0-父子组件及兄弟组件间的事件传递</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
 
       
 
@@ -585,7 +553,7 @@ export default bus;
 
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">

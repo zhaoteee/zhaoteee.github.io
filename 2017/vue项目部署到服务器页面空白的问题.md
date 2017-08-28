@@ -15,6 +15,7 @@ DocumentRoot "/users/Dev/sites"（设置apache默认指向目录）
       AllowOverride All
       Require all granted
   </Directory>
+  
   ```
   ,设置AllowOverride All是为了使apache支持.hatccess文件。
   * 在该项目根目录添加.hatccess文件（index.html平级），内容跟<a href='https://router.vuejs.org/zh-cn/essentials/history-mode.html'>HTML5 History 模式</a>类似，
@@ -27,5 +28,6 @@ DocumentRoot "/users/Dev/sites"（设置apache默认指向目录）
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule . /crm/index.html [L]
 </IfModule>
+
 ```
 ,需要修改的两个地方，RewriteBase /crm/； RewriteRule . /crm/index.html [L]，要添加项目所在文件的文件名，

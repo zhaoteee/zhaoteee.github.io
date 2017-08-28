@@ -19,7 +19,7 @@ DocumentRoot "/users/Dev/sites"（设置apache默认指向目录）
   ```
   
   ,设置AllowOverride All是为了使apache支持.hatccess文件。
-  * 在该项目根目录添加.hatccess文件（index.html平级），内容跟<a href='https://router.vuejs.org/zh-cn/essentials/history-mode.html'>HTML5 History 模式</a>类似，
+  * 在该项目根目录添加.hatccess文件（index.html平级），内容跟<a href='https://router.vuejs.org/zh-cn/essentials/history-mode.html'>HTML5 History 模式</a>(vue-router文档举例)类似，
   
 ```
   <IfModule mod_rewrite.c>

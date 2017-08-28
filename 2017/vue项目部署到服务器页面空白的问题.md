@@ -6,15 +6,15 @@
 2. 然后资源都获取到了也都加载了但是页面还是空白，没有进行渲染（这个问题好像和问题1相同，当时没有记录下来现在回忆起来有点模糊），通过后端配置解决了问题。
 3. 页面渲染成功各页面跳转页都正常了，但是又出现了在当前页面刷新都会出现404的问题，因为只有一个index.html文件，url中的路由跳转都是vue-router进行在实际文件中没有login.html等文件，服务器在找这些页面会找不到出现404错误，因此需要后端进行404全部跳转到index.html解决问题。
 4. 闲着没事有想到问题3，后端到底如何配置的，自己就实现了一遍，以mac下自带apache为例进行配置
-. 到mac下apache安装路径/private/etc/apache2/httpd.conf中开启LoadModule rewrite_module libexec/apache2/mod_rewrite.so，去掉前面的#，
-. `DocumentRoot "/users/Dev/sites"（设置apache默认指向目录）
+* 到mac下apache安装路径/private/etc/apache2/httpd.conf中开启LoadModule rewrite_module libexec/apache2/mod_rewrite.so，去掉前面的#，
+* `DocumentRoot "/users/Dev/sites"（设置apache默认指向目录）
   <Directory "/users/Dev/sites">
       Options Indexes FollowSymLinks Multiviews
       MultiviewsMatch Any
       AllowOverride All
       Require all granted
   </Directory>`,设置AllowOverride All是为了是apache支持.hatccess文件。
-  . 在项目根目录添加.hatccess文件，内容跟<a href='https://router.vuejs.org/zh-cn/essentials/history-mode.html'>HTML5 History 模式</a>类似，
+  * 在项目根目录添加.hatccess文件，内容跟<a href='https://router.vuejs.org/zh-cn/essentials/history-mode.html'>HTML5 History 模式</a>类似，
   `<IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /crm/

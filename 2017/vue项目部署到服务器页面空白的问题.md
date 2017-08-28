@@ -7,19 +7,25 @@
 3. 页面渲染成功各页面跳转页都正常了，但是又出现了在当前页面刷新都会出现404的问题，因为只有一个index.html文件，url中的路由跳转都是vue-router进行在实际文件中没有login.html等文件，服务器在找这些页面会找不到出现404错误，因此需要后端服务器配置进行404全部跳转到index.html解决问题。
 4. 闲着没事有想到问题3，后端到底如何配置的，自己就实现了一遍，以mac下自带apache为例进行配置
 * 到mac下apache安装路径/private/etc/apache2/httpd.conf中LoadModule rewrite_module libexec/apache2/mod_rewrite.so，去掉前面的#，开启rewrite_module功能；
-* `DocumentRoot "/users/Dev/sites"（设置apache默认指向目录）
+* ```
+DocumentRoot "/users/Dev/sites"（设置apache默认指向目录）
   <Directory "/users/Dev/sites">
       Options Indexes FollowSymLinks Multiviews
       MultiviewsMatch Any
       AllowOverride All
       Require all granted
-  </Directory>`,设置AllowOverride All是为了使apache支持.hatccess文件。
+  </Directory>
+  ```
+  ,设置AllowOverride All是为了使apache支持.hatccess文件。
   * 在该项目根目录添加.hatccess文件（index.html平级），内容跟<a href='https://router.vuejs.org/zh-cn/essentials/history-mode.html'>HTML5 History 模式</a>类似，
-  `<IfModule mod_rewrite.c>
+  ```
+  <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /crm/
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule . /crm/index.html [L]
-</IfModule>`,需要修改的两个地方，RewriteBase /crm/； RewriteRule . /crm/index.html [L]，要添加项目所在文件的文件名，
+</IfModule>
+```
+,需要修改的两个地方，RewriteBase /crm/； RewriteRule . /crm/index.html [L]，要添加项目所在文件的文件名，
